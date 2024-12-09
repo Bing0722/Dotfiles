@@ -33,6 +33,11 @@ if status is-interactive
     if test -f $HOME/.config/fish/custom/config.fish
         source $HOME/.config/fish/custom/config.fish
     end
+
+    # -------------------------------------------
+    # Change the working directory
+    # -------------------------------------------
+    cd ~/MyFile/
 end
 
 # -----------------------------------------------

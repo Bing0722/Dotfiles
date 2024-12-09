@@ -6,9 +6,6 @@ return {
         lsp_doc_border = true,
       },
       lsp = {
-        -- signature = {
-        --   enabled = false, -- 关闭签名
-        -- },
         signature = {
           opts = {
             size = {

@@ -19,55 +19,58 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
-    { import = "lazyvim.plugins.extras.ui.edgy" },
+    -- ai 插件
+    -- { import = "lazyvim.plugins.extras.ai.tabnine" }, -- ai补全
+    { import = "lazyvim.plugins.extras.ai.codeium" },
 
-    { import = "lazyvim.plugins.extras.editor.telescope" },
-    { import = "lazyvim.plugins.extras.editor.aerial" }, -- 快速浏览大纲
-    { import = "lazyvim.plugins.extras.editor.overseer" }, -- 自定义任务
+    -- coding 插件
+    { import = "lazyvim.plugins.extras.coding.luasnip" }, -- 可以自定义代码片段
+    { import = "lazyvim.plugins.extras.coding.neogen" }, -- 生产doxygen
+    { import = "lazyvim.plugins.extras.coding.mini-surround" }, -- 代码包围
+    { import = "lazyvim.plugins.extras.coding.mini-comment" }, -- 注释
+
+    -- editor 插件
+    { import = "lazyvim.plugins.extras.editor.illuminate" }, -- 高亮相同单词
+    { import = "lazyvim.plugins.extras.editor.mini-diff" }, -- 显示差异
+    { import = "lazyvim.plugins.extras.editor.mini-files" }, -- 文件
+    { import = "lazyvim.plugins.extras.editor.telescope" }, -- 增强搜索
     { import = "lazyvim.plugins.extras.editor.refactoring" }, -- 重构
-    { import = "lazyvim.plugins.extras.editor.navic" }, -- 上方显示代码上下文
-    { import = "lazyvim.plugins.extras.editor.outline" }, -- 显示大纲
-    { import = "lazyvim.plugins.extras.editor.inc-rename" }, -- 丝滑的重命名
-    { import = "lazyvim.plugins.extras.editor.illuminate" }, -- 重复单词可以看到光标
-    -- { import = "lazyvim.plugins.extras.editor.fzf" },
+    { import = "lazyvim.plugins.extras.editor.overseer" }, -- 任务管理
+    { import = "lazyvim.plugins.extras.editor.outline" }, -- 大纲
 
-    -- 启动时间
-    { import = "lazyvim.plugins.extras.util.startuptime" },
-    { import = "lazyvim.plugins.extras.util.chezmoi" },
-    { import = "lazyvim.plugins.extras.util.dot" },
-    { import = "lazyvim.plugins.extras.util.gitui" },
-    { import = "lazyvim.plugins.extras.util.octo" },
-    { import = "lazyvim.plugins.extras.util.project" },
+    -- formatting 插件
+    { import = "lazyvim.plugins.extras.formatting.black" }, -- python格式化
 
-    -- c++
-    { import = "lazyvim.plugins.extras.lang.cmake" },
-    { import = "lazyvim.plugins.extras.lang.clangd" },
+    -- lang 插件
+    { import = "lazyvim.plugins.extras.lang.clangd" }, -- c++/c
+    { import = "lazyvim.plugins.extras.lang.cmake" }, -- cmake
+    { import = "lazyvim.plugins.extras.lang.docker" }, -- docker
+    { import = "lazyvim.plugins.extras.lang.git" }, -- git
+    { import = "lazyvim.plugins.extras.lang.go" }, -- go
+    { import = "lazyvim.plugins.extras.lang.java" }, -- java
+    { import = "lazyvim.plugins.extras.lang.json" }, -- json
+    { import = "lazyvim.plugins.extras.lang.markdown" }, -- markdown
+    { import = "lazyvim.plugins.extras.lang.python" }, -- python
+    { import = "lazyvim.plugins.extras.lang.rust" }, -- rust
+    { import = "lazyvim.plugins.extras.lang.yaml" }, -- yaml
 
-    -- markdown
-    { import = "lazyvim.plugins.extras.lang.markdown" },
+    -- lsp 插件
+    { import = "lazyvim.plugins.extras.lsp.neoconf" }, -- 配置管理工具
+    { import = "lazyvim.plugins.extras.lsp.none-ls" }, -- 将非LSP工具集成到Neovim 中
 
-    -- python
-    { import = "lazyvim.plugins.extras.lang.python" },
+    -- ui 插件
+    { import = "lazyvim.plugins.extras.ui.mini-indentscope" }, -- 缩进
+    -- { import = "lazyvim.plugins.extras.ui.smear-cursor" }, -- 丝滑的光标(二选一)
+    -- { import = "lazyvim.plugins.extras.ui.mini-animate" }, -- 丝滑的跳转(二选一)
 
-    -- Neogen文档
-    { import = "lazyvim.plugins.extras.coding.neogen" },
-    { import = "lazyvim.plugins.extras.coding.luasnip" },
-    { import = "lazyvim.plugins.extras.coding.mini-comment" },
-    { import = "lazyvim.plugins.extras.coding.mini-surround" }, -- 快速和高效地操作问本周围的符号
+    -- util 插件
+    { import = "lazyvim.plugins.extras.util.dot" }, -- dotfile 支持
+    { import = "lazyvim.plugins.extras.util.gitui" }, -- git ui
+    { import = "lazyvim.plugins.extras.util.mini-hipatterns" }, -- 提供高亮模式匹配功能
+    { import = "lazyvim.plugins.extras.util.startuptime" }, -- 诊断性能瓶颈
+    { import = "lazyvim.plugins.extras.util.project" }, -- 项目管理
+    { import = "lazyvim.plugins.extras.util.rest" }, -- HTTP 请求的处理和测试
 
-    { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
-    -- { import = "lazyvim.plugins.extras.ui.treesitter-context" },
-    -- { import = "lazyvim.plugins.extras.ui.mini-starter" },
-    -- { import = "lazyvim.plugins.extras.ui.alpha" },
-    -- { import = "lazyvim.plugins.extras.ui.dashboard-nvim" },
-
-    -- lsp的某些配置
-    { import = "lazyvim.plugins.extras.lsp.neoconf" },
-    { import = "lazyvim.plugins.extras.lsp.none-ls" },
-
-    -- 调试
-    { import = "lazyvim.plugins.extras.dap.core" },
-    { import = "lazyvim.plugins.extras.dap.nlua" },
     -- import/override with your plugins
     { import = "plugins" },
   },

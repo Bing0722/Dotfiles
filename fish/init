@@ -1,0 +1,12 @@
+# -----------------------------------------------
+# Some init configuration
+# -----------------------------------------------
+
+set -gx EDITOR nvim # set default editor
+
+# -----------------------------------------------
+# Load costom config
+# -----------------------------------------------
+if test -f $HOME/.config/fish/costom/init.fish
+  source $HOME/.config/fish/costom/init.fish
+end

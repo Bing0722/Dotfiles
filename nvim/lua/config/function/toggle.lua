@@ -1,3 +1,5 @@
+-- 终端
+
 -- 定义 Terminal 实例
 local Terminal = require("toggleterm.terminal").Terminal
 

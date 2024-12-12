@@ -1,3 +1,11 @@
+--[[
+  _   _  __     __  ___   __  __
+ | \ | | \ \   / / |_ _| |  \/  |
+ |  \| |  \ \ / /   | |  | |\/| |
+ | |\  |   \ V /    | |  | |  | |
+ |_| \_|    \_/    |___| |_|  |_|
+]]
+--
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 

@@ -2,6 +2,9 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
+---@diagnostic disable-next-line: unused-local
+local opt = vim.opt
+
 -- 如果你不想使用 `:LazyExtras`，
 -- 那么你需要设置下面的选项。
 vim.g.lazyvim_picker = "telescope"
@@ -18,5 +21,13 @@ vim.g.lazyvim_python_lsp = "pyright"
 -- 设置为 "ruff_lsp" 以使用旧版的 LSP 实现。
 vim.g.lazyvim_python_ruff = "ruff"
 
--- 设置为 false 以禁用自动格式化
--- vim.g.lazyvim_eslint_auto_format = true
+------------------- General settings -------------------
+_G.browser = "Google Chrome"
+
+-- opt.list = true
+-- opt.listchars = "tab:→→,nbsp:·,trail:~,extends:→,precedes:←,eol:↲"
+
+opt.showbreak = "↪"
+-- 在 LazyVim 中确保底部留有空白
+opt.scrolloff = 8 -- 保证光标距离上下各8行
+opt.sidescrolloff = 4 -- 保证左右也有空间

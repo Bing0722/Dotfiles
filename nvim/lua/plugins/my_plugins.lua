@@ -18,6 +18,7 @@ return {
   {
     -- 插件名称：accelerated-jk
     -- 功能：加速上下移动光标，提高导航效率
+    -- WARNING: 在linux中kitty终端使用cursor_trail光标拖影的时候出现问题
     "rhysd/accelerated-jk",
     enabled = false,
     config = function()

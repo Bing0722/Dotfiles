@@ -67,9 +67,10 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.util.dot" }, -- dotfile 支持
     { import = "lazyvim.plugins.extras.util.gitui" }, -- git ui
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" }, -- 提供高亮模式匹配功能
-    { import = "lazyvim.plugins.extras.util.startuptime" }, -- 诊断性能瓶颈
+    -- { import = "lazyvim.plugins.extras.util.startuptime" }, -- 诊断性能瓶颈
     { import = "lazyvim.plugins.extras.util.project" }, -- 项目管理
     { import = "lazyvim.plugins.extras.util.rest" }, -- HTTP 请求的处理和测试
+    { import = "lazyvim.plugins.extras.util.chezmoi" }, -- dotfile 管理
 
     -- import/override with your plugins
     { import = "plugins" },

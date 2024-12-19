@@ -59,7 +59,7 @@ end, { noremap = true, silent = true, desc = "运行一些简单的脚本和程�
 
 --------------------- 预览Markdown文件---------------------
 -- 设置快捷键 F4 来打开 Markdown 文件
-vim.keymap.set("n", "<F4>", function()
+map("n", "<F4>", function()
   -- 获取当前文件路径
   local filename = vim.fn.expand("%:p")
 
@@ -82,3 +82,6 @@ vim.keymap.set("n", "<F4>", function()
     print("Current file is not a markdown file.")
   end
 end, { desc = "Open markdown file in Typora" })
+
+------------------- Overseer ------------------------------
+map("n", "<F2>", ":OverseerRun<CR>", { desc = "run task" })

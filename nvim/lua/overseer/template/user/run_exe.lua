@@ -1,15 +1,18 @@
 return {
-  name = "run python script",
+  name = "run exe",
   params = {
-    cmd = { optional = true, type = "string", default = "python3" },
-    cwd = { optional = true, type = "string" },
+    -- cmd = { optional = true, type = "string", default = "./" },
     args = { optional = false, type = "string", default = "" },
   },
+  condition = {
+    filetype = { "cpp", "c" },
+  },
   builder = function(params)
+    local file_name = vim.fn.expand("%:t:r") .. ".out"
     return {
       name = vim.fn.expand("%:t"),
-      cmd = params.cmd,
-      args = { vim.fn.expand("%:p") },
+      cmd = "./" .. file_name,
+      args = { params.args },
       cwd = vim.fn.expand("%:p:h"),
       components = {
         "task_list_on_start",
@@ -19,7 +22,4 @@ return {
       },
     }
   end,
-  condition = {
-    filetype = { "python" },
-  },
 }

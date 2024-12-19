@@ -9,6 +9,12 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.b.autoformat = false
   end,
 })
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "TutorialConfig.h.in" }, -- 针对文件名
+  callback = function()
+    vim.b.autoformat = false
+  end,
+})
 
 ------------------- Disable spelling check ----------------
 vim.api.nvim_create_autocmd("FileType", {

@@ -3,6 +3,7 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = { "hrsh7th/cmp-emoji" },
+    enabled = false,
     opts = function(_, opts)
       -- 确保插件已加载所需模块
       local cmp = require("cmp")

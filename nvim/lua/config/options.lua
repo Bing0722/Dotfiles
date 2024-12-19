@@ -7,7 +7,8 @@ local opt = vim.opt
 
 -- 如果你不想使用 `:LazyExtras`，
 -- 那么你需要设置下面的选项。
-vim.g.lazyvim_picker = "telescope"
+-- vim.g.lazyvim_picker = "telescope"
+vim.g.lazyvim_picker = "fzf"
 
 -- 用于 Rust 的 LSP 服务器。
 -- 设置为 "bacon-ls" 以使用 bacon-ls 而不是 rust-analyzer。
@@ -21,8 +22,10 @@ vim.g.lazyvim_python_lsp = "pyright"
 -- 设置为 "ruff_lsp" 以使用旧版的 LSP 实现。
 vim.g.lazyvim_python_ruff = "ruff"
 
+-- vim.g.lazyvim_blink_main = true
 ------------------- General settings -------------------
-_G.browser = "Google Chrome"
+-- _G.browser = "Google Chrome"
+_G.browser = "Firefox"
 
 -- opt.list = true
 -- opt.listchars = "tab:→→,nbsp:·,trail:~,extends:→,precedes:←,eol:↲"

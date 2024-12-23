@@ -1,16 +1,15 @@
 -- Autocmds are automatically loaded on the VeryLazy event
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
+--
 -- Add any additional autocmds here
+-- with `vim.api.nvim_create_autocmd`
+--
+-- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
+-- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
 ------------- Disable autoformat for some files -----------
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "conf" },
-  callback = function()
-    vim.b.autoformat = false
-  end,
-})
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = { "TutorialConfig.h.in" }, -- 针对文件名
   callback = function()
     vim.b.autoformat = false
   end,
@@ -24,28 +23,10 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-------------------- Auto chdir ---------------------------
 vim.api.nvim_create_autocmd("BufReadPost", {
   pattern = "*",
   callback = function()
     vim.opt.autochdir = true
   end,
 })
-
-------------------- markdown_table_format -----------------
-local group = vim.api.nvim_create_augroup("Coding", { clear = true })
-vim.api.nvim_create_autocmd("InsertLeave", {
-  group = group,
-  pattern = "*.md",
-  callback = function()
-    require("internal.markdown_table_format").format_markdown_table()
-  end,
-})
-vim.api.nvim_create_autocmd("TextChangedI", {
-  group = group,
-  pattern = "*.md",
-  callback = function()
-    require("internal.markdown_table_format").format_markdown_table_lines()
-  end,
-})
-
------------------------------------------------------------

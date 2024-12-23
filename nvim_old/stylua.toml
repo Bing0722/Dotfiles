@@ -1,0 +1,6 @@
+# 自定义格式化lua 代码的行为
+indent_type = "Spaces"
+indent_width = 2
+column_width = 120
+line_endings = "Unix"
+call_parentheses = "Always"

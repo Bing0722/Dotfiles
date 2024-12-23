@@ -1,0 +1,7 @@
+{
+	"myheader": {
+		"prefix": "hpp",
+		"body": ["#ifndef _$1_H", "#define _$1_H", "", "#endif // _$1_H"],
+		"desc": "this is a simple defense header."
+	}
+}

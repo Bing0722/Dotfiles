@@ -20,13 +20,13 @@ return {
         },
         level = 2,
         minimum_width = 50,
-        render = "default", -- "default"、"minimal"、"simple"、"compact"、"wrapped-compact"
-        stages = "fade", -- "fade_in_slide_out"、"fade"、"slide"、"static"
+        render = "simple", -- "default"、"minimal"、"simple"、"compact"、"wrapped-compact"
+        stages = "fade_in_slide_out", -- "fade_in_slide_out"、"fade"、"slide"、"static"
         time_formats = {
           notification = "%T",
           notification_history = "%FT%T",
         },
-        timeout = 2000,
+        timeout = 1000,
         top_down = true,
       })
     end,

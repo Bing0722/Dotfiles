@@ -1,0 +1,22 @@
+// -*- mode: jsonc -*-
+{
+	"layer": "top", // 指定状态栏显示在屏幕顶部
+	"output": ["*"], // 指定状态栏显示在所有输出设备上(通常是主显示器)
+	"position": "top", // Waybar position (top|bottom|left|right)
+	"height": 30, // Waybar height (to be removed for auto height)
+	// "width": 1280,   // Waybar width
+	"spacing": 6, // Gaps between modules (4px)
+
+	// "mod": "dock",
+	"exclusive": true, // 独占状态栏，可能会影响其他程序的显示
+	"passthrough": false, // 禁用透传事件，意味着点击事件会被状态栏捕获
+	"gtk-layer-shell": true, // 启用 GTK layer-shell，允许 GTK 应用程序与 Waybar 交互
+	"reload_style_on_change": true, // 当配置文件发生变化时重新加载样式
+
+	// Choose the order of the modules
+	"modules-left": [],
+
+	"modules-center": ["hyprland/workspaces"],
+
+	"modules-right": []
+}

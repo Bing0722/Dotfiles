@@ -32,8 +32,8 @@ return {
         -- 如果当前在任务列表中，则在最近的其他窗口中打开一个分屏
         -- window.open({ direction = "right" })
         -- window.open({ direction = "bottom" })
-        window.open({ direction = "left" })
-        actions["open float"].run(task)
+        -- window.open({ direction = "left" })
+        -- actions["open float"].run(task)
       end,
 
       -- 任务重置时调用

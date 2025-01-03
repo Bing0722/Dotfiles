@@ -1,0 +1,45 @@
+[
+  {
+    "label": "c++ run",
+    "command": "g++ -std=c++17 -o $ZED_STEM.out $ZED_FILE && ./$ZED_STEM.out && rm $ZED_STEM.out",
+    "show_command": false,
+    "show_summary": false,
+    "env": {},
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "dock",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "cmake run",
+    "command": "mkdir -p build && cd build && cmake .. && make && ./main && cd .. && rm -rf build",
+    "env": {},
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "dock",
+    "hide": "never"
+  },
+  {
+    "label": "python run",
+    "command": "python3 ./$ZED_FILENAME",
+    "env": {},
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "dock",
+    "hide": "never"
+  },
+  {
+    "label": "lua run",
+    "command": "lua ./$ZED_FILENAME",
+    "env": {},
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "dock",
+    "hide": "never"
+  }
+]

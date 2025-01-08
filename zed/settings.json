@@ -1,39 +1,124 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "vim_mode": true,
-  "relative_line_numbers": true,
-  "ui_font_size": 20,
-  "buffer_font_size": 20,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-  "ui_font_family": "JetBrainsMono Nerd Font",
+  // theme
   "theme": {
     "mode": "system",
     "light": "One Light",
     "dark": "Catppuccin Macchiato"
   },
-  "autosave": "on_window_change",
+  // font
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 20,
+  "buffer_font_features": {
+    // "calt": false
+  },
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_size": 20,
+  // Fade level for unused code
+  "unnecessary_code_fade": 0.3,
+  "vim_mode": true,
+  "relative_line_numbers": true,
   "restore_on_startup": "last_workspace",
+  // Automatically show the completion menu while typing in the editor
+  // (without explicit requests)
+  "show_completions_on_input": true,
+  // Show inline and side-by-side documentation in the completion menu
+  "show_completion_documentation": true,
+  // Show method signatures within parentheses
+  "auto_signature_help": true,
+  // Show signature help after completion or bracket insertion.
+  // If `auto_signature_help` is enabled, this setting will be treated as enabled.
+  "show_signature_help_after_edits": true,
+  "autosave": "off",
+  "indent_guides": {
+    // Show indent guides in the editor
+    "enabled": true,
+    // Width of the indent guide lines (in pixels), range: 1 to 10
+    "line_width": 1,
+    // Width of the active indent guide lines (in pixels), range: 1 to 10
+    "active_line_width": 2,
+    // Control how indent guide lines are colored.
+    // This setting can take the following values:
+    //
+    // 1. "disabled" (disabled)
+    // 2. "fixed" (fixed color)
+    // 3. "indent_aware" (color based on indentation level)
+    "coloring": "indent_aware",
+    "background_coloring": "disabled"
+  },
+  // Number of lines to keep above and below the cursor when scrolling
+  "vertical_scroll_margin": 5,
+  // Settings related to inlay hints
+  "inlay_hints": {
+    // Globally enable hints, disabled by default
+    "enabled": true,
+    // Enable specific types of hints, enabled by default
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    // Hints for null/None types in LSP
+    "show_other_hints": true,
+    // Whether to show a background for inlay hints.
+    //
+    // If set to `true`, the background will use the theme's `hint.background` color.
+    "show_background": false,
+    // Time to wait before requesting hints after editing the buffer (in milliseconds).
+    // Set to 0 to disable debounce.
+    "edit_debounce_ms": 700,
+    // Time to wait before requesting hints after scrolling the buffer (in milliseconds).
+    // Set to 0 to disable debounce.
+    "scroll_debounce_ms": 50
+  },
+  // Settings related to editor tabs
+  "tabs": {
+    // Display Git status colors on editor tabs
+    "git_status": true,
+    // Position of the close button on editor tabs
+    "close_position": "right",
+    // Show file icons on editor tabs
+    "file_icons": true,
+    // Always show the close button on tabs
+    "always_show_close_button": true,
+    // Behavior after closing the current tab
+    //
+    // 1. Activate the previously opened tab (default):
+    //     "history"
+    // 2. Activate the tab to the right (if available):
+    //     "neighbour"
+    // 3. Activate the tab to the left (if available):
+    //     "left_neighbour"
+    "activate_on_close": "history"
+  },
+  // Whether to format the buffer before saving
+  // Note: If delayed auto-save is enabled, `format_on_save` will be ignored.
+  "format_on_save": "on",
+  "proxy": "http://127.0.0.1:7897",
   "file_icons": true,
   "git_status": true,
-  "inlay_hints": {
-    "enabled": true
-  },
   "languages": {
     "C++": {
-      "format_on_save": "on",
-      "tab_size": 2
+      "tab_size": 4
+    },
+    "Python": {
+      "tab_size": 4
+    },
+    "Rust": {
+      "tab_size": 4
+    },
+    "Markdown": {
+      "tab_size": 4
     }
   },
   "lsp": {
     "clangd": {
-      "arguments": ["-background-index", "-compile-commands-dir=build"]
+      "binary": {
+        "arguments": [
+          "--background-index",
+          "--clang-tidy",
+          "--completion-style=detailed",
+          "--function-arg-placeholders=0",
+          "--header-insertion-decorators=0",
+          "--fallback-style=llvm"
+        ]
+      }
     }
   }
 }

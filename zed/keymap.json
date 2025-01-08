@@ -2,7 +2,8 @@
   {
     "context": "Workspace",
     "bindings": {
-      "shift shift": "file_finder::Toggle"
+      "shift shift": "file_finder::Toggle",
+      "alt-g": "task::Spawn"
     }
   },
   {

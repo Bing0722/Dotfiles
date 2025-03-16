@@ -1,0 +1,17 @@
+{
+  "cout":{
+    "prefix": "cout",
+    "body":[
+      "std::cout << $1 << std::endl;"
+    ],
+    "description": "simple cout statement"
+  },
+
+  "cerr":{
+    "prefix": "cerr",
+    "body":[
+      "std::cerr << $1 << std::endl;"
+    ],
+    "description": "simple cerr statement"
+  }
+}

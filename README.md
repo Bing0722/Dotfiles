@@ -1,15 +1,12 @@
 # Dotfiles
 
-🔧我的配置文件
+🔧这是我的配置文件
 
-## Editor
+- [x] 编辑器 `nvim`、`zed`
+- [x] 终端 `kitty`
+- [x] shell `zsh`、`fish`
+- [ ] 桌面合成器 `hyprland`
+- [ ] ...
 
-我的编译器是NVIM
-
-## Terminal
-
-我的终端使用的是Kitty
-
-## Shell
-
-我的Shell使用的是Fish
+> [!Tip]
+> 这是在Arch Linux中的配置

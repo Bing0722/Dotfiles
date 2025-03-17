@@ -9,18 +9,6 @@ return {
     end,
   },
   {
-    -- 插件名称：accelerated-jk
-    -- 功能：加速上下移动光标，提高导航效率
-    -- WARNING: 在linux中kitty终端使用cursor_trail光标拖影的时候出现问题
-    "rhysd/accelerated-jk",
-    enabled = false,
-    config = function()
-      -- 使用 vim.keymap.set 将快捷键映射到 accelerated-jk 的功能
-      vim.keymap.set("n", "j", "<Plug>(accelerated_jk_gj)", { desc = "快速向下移动" })
-      vim.keymap.set("n", "k", "<Plug>(accelerated_jk_gk)", { desc = "快速向上移动" })
-    end,
-  },
-  {
     "akinsho/toggleterm.nvim", -- 插件名
     cmd = { "ToggleTerm", "TermExec" }, -- 触发插件的命令，当输入这些命令时会启动终端窗口
     opts = {

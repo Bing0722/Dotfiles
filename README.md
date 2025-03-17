@@ -10,3 +10,4 @@
 
 > [!Tip]
 > 这是在Arch Linux中的配置
+> 使用 `./install.sh` 安装

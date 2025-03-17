@@ -1,0 +1,18 @@
+# 编辑器
+neovim
+
+# 替代 ls
+eza
+
+# 替代 cd
+zoxide
+
+# 注释
+btop
+
+# 包管理c++
+vcpkg
+
+# docker 容器
+docker
+docker-compose

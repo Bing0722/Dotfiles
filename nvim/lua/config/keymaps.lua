@@ -19,3 +19,5 @@ vim.api.nvim_set_keymap("n", "q", ':echo "录制宏功能已被禁用." <CR>', {
 -------------------- OverseerRun -----------------------
 
 map("n", "<F5>", ":OverseerRun<CR>", { desc = "run task" })
+
+map("n", "<F8>", "<cmd>lua require('kulala').run()<cr>", { desc = "send the request" })

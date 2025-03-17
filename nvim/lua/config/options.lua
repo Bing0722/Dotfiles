@@ -24,3 +24,6 @@ vim.g.lazyvim_python_ruff = "ruff"
 _G.browser = "Firefox"
 
 vim.g.lazyvim_blink_main = false
+
+-- set picker
+vim.g.lazyvim_picker = "snacks"

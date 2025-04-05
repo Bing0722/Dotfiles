@@ -51,7 +51,9 @@ export EDITOR=nvim
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$HOME/.local/bin:$PATH
 export GOPROXY=https://goproxy.cn,direct
-export PATH="$HOME/App/vcpkg:$PATH"
+export VCPKG_ROOT=$HOME/.local/share/vcpkg
+
+export PATH=$PATH:/opt/warpdotdev/warp-terminal
 
 # zoxide init
 eval "$(zoxide init zsh)"

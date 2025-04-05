@@ -30,3 +30,10 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     vim.opt.autochdir = true
   end,
 })
+------------------------ qss ------------------------------
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.qss",
+  callback = function()
+    vim.bo.filetype = "css" -- 或者你可以创建一个自定义 filetype
+  end,
+})

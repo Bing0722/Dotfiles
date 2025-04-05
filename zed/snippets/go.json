@@ -1,0 +1,9 @@
+{
+  "fmt.Println":{
+    "prefix": "fp",
+    "body":[
+      "fmt.Println($1)"
+    ],
+    "description": "Prints a formatted string to stdout"
+  }
+}

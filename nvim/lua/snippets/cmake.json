@@ -1,0 +1,39 @@
+{
+	"cmake": {
+		"prefix": "cc",
+		"body": [
+			"cmake_minimum_required(VERSION 3.30)",
+			"",
+			"project($1)",
+			"",
+			"set(CMAKE_CXX_STANDARD 11)",
+			"",
+			"file(GLOB SOURCES \"*.cc\")",
+			"",
+			"add_executable(\\${PROJECT_NAME} \\${SOURCES})",
+			"",
+			"target_link_libraries(\\${PROJECT_NAME})"
+		],
+		"desc": "cmake simple"
+	},
+	"cmake qt": {
+		"prefix": "cqt",
+		"body": [
+			"cmake_minimum_required(VERSION 3.30)",
+			"",
+			"project($1)",
+			"",
+			"set(CMAKE_CXX_STANDARD 17)",
+			"set(CMAKE_AUTOMOC ON)",
+			"",
+			"find_package(Qt6 REQUIRED COMPONENTS $2)",
+			"",
+			"file(GLOB SOURCES \"*.cc\")",
+			"",
+			"add_executable(\\${PROJECT_NAME} \\${SOURCES})",
+			"",
+			"target_link_libraries(\\${PROJECT_NAME} PRIVATE $3)"
+		],
+		"desc": "qt cmake"
+	}
+}

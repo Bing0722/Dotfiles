@@ -1,9 +1,18 @@
 {
   // Ai
+  "edit_predictions": {
+    "mode": "eager",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_assistant": true
+  },
+  "show_edit_predictions": true,
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
@@ -138,7 +147,7 @@
           "--completion-style=detailed", // 设置补全风格，detailed 模式会提供更详细的函数参数和返回值信息。
           "--function-arg-placeholders=0", // 关闭函数参数占位符，让补全时不会自动填充默认参数。
           "--header-insertion-decorators=0", // 关闭函数参数占位符，让补全时不会自动填充默认参数。
-          "--fallback-style=google", // 设置默认的代码格式，如果 .clang-format 文件不存在，就使用 llvm/google 风格
+          "--fallback-style=llvm", // 设置默认的代码格式，如果 .clang-format 文件不存在，就使用 llvm/google 风格
           "-compile-commands-dir=build" // 指定 compile_commands.json 所在目录，确保 clangd 正确解析头文件和编译参数
         ]
       }

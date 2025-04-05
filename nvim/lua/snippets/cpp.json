@@ -3,5 +3,47 @@
 		"prefix": "hpp",
 		"body": ["#ifndef _$1_H", "#define _$1_H", "", "#endif // _$1_H"],
 		"desc": "this is a simple defense header."
+	},
+	"class": {
+		"prefix": "cls",
+		"body": [
+			"class $1 {",
+			"public:",
+			"  $1();",
+			"  ~$1();",
+			"",
+			"private:",
+			"",
+			"};"
+		],
+		"desc": "this is a class"
+	},
+	"cout": {
+		"prefix": "cout",
+		"body": ["std::cout << $1 << std::endl;;"],
+		"desc": "this is a cout"
+	},
+	"cerr": {
+		"prefix": "cerr",
+		"body": ["std::cerr << $1 << std::endl;;"],
+		"desc": "this is a cout"
+	},
+	"qDebug": {
+		"prefix": "bug",
+		"body": ["qDebug() << $1;"],
+		"desc": "this is a qDebug quick"
+	},
+	"Qt": {
+		"prefix": "qt",
+		"body": [
+			"#include <QApplication>",
+			"",
+			"int main(int argc, char* argv[]) {",
+			"  QApplication app(argc, argv);",
+			"  $1",
+			"  return app.exec();",
+			"}"
+		],
+		"desc": "this is a simple Qt executable"
 	}
 }

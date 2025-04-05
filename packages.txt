@@ -7,6 +7,12 @@ eza
 # 替代 cd
 zoxide
 
+# 替代 du
+duf
+
+# 替代 cat
+bat
+
 # 注释
 btop
 

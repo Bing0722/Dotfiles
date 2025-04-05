@@ -4,7 +4,7 @@
 
 local map = vim.keymap.set
 
-------------------- General Keymaps -------------------
+------------------- General Keymaps -----------------------
 -- 为 insert 模式设置 esc 映射
 map("i", "jj", "<esc>", { desc = "快速退出插入模式" })
 map("i", "jk", "<esc>", { desc = "快速退出插入模式" })
@@ -16,8 +16,9 @@ map("i", "jk", "<esc>", { desc = "快速退出插入模式" })
 -- 禁用 q 键的录制宏功能
 vim.api.nvim_set_keymap("n", "q", ':echo "录制宏功能已被禁用." <CR>', { noremap = true, silent = true })
 
--------------------- OverseerRun -----------------------
-
+-------------------- OverseerRun --------------------------
 map("n", "<F5>", ":OverseerRun<CR>", { desc = "run task" })
 
+------------------------- kulala --------------------------
+-- 发送请求
 map("n", "<F8>", "<cmd>lua require('kulala').run()<cr>", { desc = "send the request" })

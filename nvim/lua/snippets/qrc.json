@@ -1,0 +1,13 @@
+{
+	"rcc": {
+		"prefix": "rcc",
+		"body": [
+			"<RCC>",
+			"  <qresource prefix=\"/\">",
+			"    <file>$1</file>",
+			"  </qresource>",
+			"</RCC>"
+		],
+		"desc": "a qrc simple templete"
+	}
+}

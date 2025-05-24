@@ -6,10 +6,10 @@
       "proxy": null,
       "proxy_no_verify": null
     },
-    "enabled_in_assistant": true
+    "enabled_in_text_threads": true
   },
   "show_edit_predictions": true,
-  "assistant": {
+  "agent": {
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
@@ -24,7 +24,7 @@
   "icon_theme": "Catppuccin Macchiato",
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Macchiato",
+    "light": "Catppuccin Macchiato - No Italics",
     "dark": "Catppuccin Macchiato"
   },
   // 字体

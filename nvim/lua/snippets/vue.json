@@ -1,0 +1,40 @@
+{
+	"template": {
+		"prefix": "vue2",
+		"body": [
+			"<template>",
+			"  $1",
+			"</template>",
+			"",
+			"<script lang=\"ts\">",
+			"  export default {",
+			"    name: '$2'",
+			"  }",
+			"</script>",
+			"",
+			"<style>",
+			"",
+			"</style>"
+		],
+		"desc": "export default funtion"
+	},
+	"template2": {
+		"prefix": "vue3",
+		"body": [
+			"<script setup lang=\"ts\">",
+			"",
+			"</script>",
+			"",
+			"<template>",
+			"  <div>",
+			"    $1",
+			"  </div>",
+			"</template>",
+			"",
+			"<style scoped>",
+			"",
+			"</style>"
+		],
+		"desc": "export default funtion"
+	}
+}

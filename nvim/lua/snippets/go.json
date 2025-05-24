@@ -1,0 +1,17 @@
+{
+	"rcc": {
+		"prefix": "main",
+		"body": [
+			"package main",
+			"",
+			"import (",
+			"  \"fmt\"",
+			")",
+			"",
+			"func main() {",
+			"  fmt.Println(\"Hello, World!\")",
+			"}"
+		],
+		"desc": "a simple go main"
+	}
+}

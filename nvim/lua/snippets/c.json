@@ -1,0 +1,19 @@
+{
+	"myheader": {
+		"prefix": "hpp",
+		"body": ["#ifndef _$1_H", "#define _$1_H", "", "#endif // _$1_H"],
+		"desc": "this is a simple defense header."
+	},
+	"main": {
+		"prefix": "cc",
+		"body": [
+			"#include <stdio.h>",
+			"",
+			"int main(int argc, char *argv[]) {",
+			"  printf(\"Hello, World!\\n\");$1",
+			"  return 0;",
+			"}"
+		],
+		"desc": "this is a simple defense header."
+	}
+}

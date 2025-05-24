@@ -15,13 +15,23 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting )
 source $ZSH/oh-my-zsh.sh
 
+# 读取命令行参数补全配置
+if [[ -d ~/.zsh/completions && -n $(ls -A ~/.zsh/completions) ]]; then
+  fpath=(~/.zsh/completions $fpath)
+fi
+
+warn() { echo "\033[1;33m[警告]\033[0m $1" }
+info() { echo "\033[1;34m[提示]\033[0m $1" }
+
+autoload -Uz compinit
+compinit
 
 # Helpful aliases
 alias cl='clear' # clear terminal
 alias l='eza -lh --icons=auto' # long list
 alias ls='eza -1 --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
-alias ld='eza -lhD --icons=auto' # long list dirs
+# alias ld='eza -lhD --icons=auto' # long list dirs
 alias lt='eza --icons=auto --tree' # list folder as tree
 alias un='$aurhelper -Rns' # uninstall package
 alias up='$aurhelper -Syu' # update system/package/aur
@@ -42,6 +52,9 @@ alias .5='cd ../../../../..'
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
 alias vim=nvim
+alias cvim='NVIM_APPNAME=nvim-nvchad nvim'
+alias lvim='NVIM_APPNAME=nvim-nvchad-lazy nvim'
+alias avim='NVIM_APPNAME=nvim_astro nvim'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -54,6 +67,17 @@ export GOPROXY=https://goproxy.cn,direct
 export VCPKG_ROOT=$HOME/.local/share/vcpkg
 
 export PATH=$PATH:/opt/warpdotdev/warp-terminal
+
+# set cmake find position
+export CMAKE_TOOLCHAIN_FILE=$HOME/.local/share/vcpkg/scripts/buildsystems/vcpkg.cmake
+
+# set fcitx5
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export XMODIFIERS="@im=fcitx5"
+
+
+export PATH="$HOME/MyFile/template/bin:$PATH"
 
 # zoxide init
 eval "$(zoxide init zsh)"
@@ -111,3 +135,13 @@ proxy_status() {
     echo "RSYNC_PROXY: $RSYNC_PROXY"
 }
 
+# -----------------------------------------------
+
+
+# pnpm
+export PNPM_HOME="/home/bing/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

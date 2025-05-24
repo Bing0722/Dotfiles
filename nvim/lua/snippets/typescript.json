@@ -1,0 +1,12 @@
+{
+	"log": {
+		"prefix": "log",
+		"body": ["console.log($1);"],
+		"desc": "a console print"
+	},
+	"function": {
+		"prefix": "fc",
+		"body": ["function $1($2)$3 {$4}"],
+		"desc": "a simple function"
+	}
+}

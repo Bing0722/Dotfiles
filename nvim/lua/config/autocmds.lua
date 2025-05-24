@@ -24,6 +24,17 @@ if not vim.g.vscode then
     end,
   })
 
+  --------------------- set cpp -----------------------------
+  vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "cpp", "c", "h", "hpp", "cc" },
+    callback = function()
+      vim.opt_local.tabstop = 4 -- Tab 显示为 4 个空格宽
+      vim.opt_local.shiftwidth = 4 -- >> << 缩进宽度为 4
+      vim.opt_local.softtabstop = 4 -- 插入模式下 tab 也是 4 个空格
+      vim.opt_local.expandtab = true -- 使用空格代替 tab 字符
+    end,
+  })
+
   -------------------- Auto chdir ---------------------------
   -- vim.api.nvim_create_autocmd("BufReadPost", {
   --   pattern = "*",

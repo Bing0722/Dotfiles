@@ -15,12 +15,44 @@
 				"path": "./cpp.json"
 			},
 			{
+				"language": "c",
+				"path": "./c.json"
+			},
+			{
 				"language": "cmake",
 				"path": "./cmake.json"
 			},
 			{
 				"language": "xml",
 				"path": "./qrc.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./typescript.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./tsx.json"
+			},
+			{
+				"language": "vue",
+				"path": "./vue.json"
+			},
+			{
+				"language": "go",
+				"path": "./go.json"
+			},
+			{
+				"language": "rust",
+				"path": "./rust.json"
+			},
+			{
+				"language": "java",
+				"path": "./java.josn"
+			},
+			{
+				"language": "lua",
+				"path": "./lua.json"
 			}
 		]
 	}

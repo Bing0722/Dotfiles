@@ -1,0 +1,77 @@
+---
+# 使用 Google 风格作为基础
+BasedOnStyle: google
+
+# 访问说明符左对齐，不缩进
+IndentAccessModifiers: false
+AccessModifierOffset: -4
+
+# 每层缩进使用 4 个空格
+IndentWidth: 4
+
+# 设置为 C++ 语言(也可为 C)
+Language: Cpp
+
+# 一个 tab 的宽度设置为 4
+TabWidth: 4
+
+# 使用空格代替 tab
+UseTab: Never
+
+# 最大行宽为 100，超过会自动换行
+ColumnLimit: 100
+
+# 多个连续空行最多保留 1 个
+MaxEmptyLinesToKeep: 1
+
+# 对括号内的内容进行对齐到首参数位置
+AlignAfterOpenBracket: Align
+
+# 用于控制在初始化结构体数组时是否按列对齐每个字段
+AlignArrayOfStructures: Left
+
+# 启用连续赋值语句对齐（等号对齐），例如：
+# int a   = 1;
+# int abc = 2;
+AlignConsecutiveAssignments: Consecutive
+
+# 启用连续变量声明的类型和变量名对齐，例如：
+# int   a;
+# float b;
+AlignConsecutiveDeclarations: Consecutive
+
+# 启用连续宏定义对齐，例如：
+# #define ONE   1
+# #define TWO   2
+AlignConsecutiveMacros: Consecutive
+
+# 启用连续位字段定义对齐，例如：
+# unsigned int a : 1;
+# unsigned int b : 2;
+AlignConsecutiveBitFields: Consecutive
+
+# 控制尾随注释（行尾注释）对齐设置
+AlignTrailingComments:
+  Kind: Always # 始终对齐尾随注释（如 a = 1;  // 说明）
+  OverEmptyLines: 2 # 可跨越最多 2 行空行进行对齐
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true # class 的 `{` 换行
+  AfterControlStatement: Always # if/while/for 等 `{` 换行
+  AfterEnum: true # enum 的 `{` 换行
+  AfterFunction: true # 函数定义的 `{` 换行
+  AfterNamespace: true # namespace 的 `{` 换行
+  AfterStruct: true # struct 的 `{` 换行
+  SplitEmptyFunction: false # 空函数 `{}` 是否换行
+  SplitEmptyRecord: false # 空 struct/class `{}` 是否换行
+  SplitEmptyNamespace: false # 空 namespace `{}` 是否换行
+
+# 不对 include 排序
+SortIncludes: Never
+
+# 只有一句的时候不允许在同一行
+AllowShortBlocksOnASingleLine: Never
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false

@@ -19,6 +19,7 @@ return {
           border = "rounded",
         },
       },
+      list = { selection = { preselect = false, auto_insert = true } },
     },
     -- keymap = {
     --   preset = "enter",
@@ -33,6 +34,7 @@ return {
     --   "fallback",
     -- },
     -- ["<S-Tab>"] = { "snippet_backward", "select_prev", "fallback" },
+    -- 这里设置回车键的行为
     -- },
     sources = {
       -- 这里可以添加 nvim-cmp 的源

@@ -51,6 +51,7 @@ alias .5='cd ../../../../..'
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
+alias Zed=zeditor
 alias vim=nvim
 alias cvim='NVIM_APPNAME=nvim-nvchad nvim'
 alias lvim='NVIM_APPNAME=nvim-nvchad-lazy nvim'
@@ -87,7 +88,7 @@ eval "$(zoxide init zsh)"
 # refer to https://wiki.archlinux.org/title/Proxy_server
 # -----------------------------------------------
 
-proxy="127.0.0.1:7897"  # 使用全局变量
+proxy="http://127.0.0.1:7897"  # 使用全局变量
 
 proxy_on() {
     if (( $# > 0 )); then
